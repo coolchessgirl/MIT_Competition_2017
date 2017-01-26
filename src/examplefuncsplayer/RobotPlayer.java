@@ -2,7 +2,7 @@ package examplefuncsplayer;
 import battlecode.common.*;
 
 public strictfp class RobotPlayer {
-    static RobotController rc;
+	static RobotController rc;
 
     /**
      * run() is the method that is called when a robot is instantiated in the Battlecode world.
@@ -27,6 +27,12 @@ public strictfp class RobotPlayer {
             case SOLDIER:
                 runSoldier();
                 break;
+            case TANK:
+            	runTank();
+            	break;
+            case SCOUT:
+            	runScout();
+            	break;
             case LUMBERJACK:
                 runLumberjack();
                 break;
@@ -140,7 +146,12 @@ public strictfp class RobotPlayer {
             }
         }
     }
-
+    static void runTank() throws GameActionException{
+    	
+    }
+    static void runScout() throws GameActionException{
+    	
+    }
     static void runLumberjack() throws GameActionException {
         System.out.println("I'm a lumberjack!");
         Team enemy = rc.getTeam().opponent();
@@ -276,3 +287,4 @@ public strictfp class RobotPlayer {
         return (perpendicularDist <= rc.getType().bodyRadius);
     }
 }
+
