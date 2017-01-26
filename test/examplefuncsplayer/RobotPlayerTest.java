@@ -27,6 +27,12 @@ public strictfp class RobotPlayerTest{
             case SOLDIER:
                 runSoldier();
                 break;
+            case TANK:
+            	runTank();
+            	break;
+            case SCOUT:
+            	runScout();
+            	break;
             case LUMBERJACK:
                 runLumberjack();
                 break;
@@ -140,7 +146,12 @@ public strictfp class RobotPlayerTest{
             }
         }
     }
-
+    static void runTank() throws GameActionException{
+    	
+    }
+    static void runScout() throws GameActionException{
+    	
+    }
     static void runLumberjack() throws GameActionException {
         System.out.println("I'm a lumberjack!");
         Team enemy = rc.getTeam().opponent();
